@@ -1797,6 +1797,10 @@ extern "C" {
  *
  * The default value is 0.
  *
+ * Set this to "1" for sixaxis.sys and for drivers that speak the same output
+ * commands, including DsHidMini in SXS mode on Windows. That path supports
+ * rumble and the four player LEDs.
+ *
  * This hint should be set before initializing joysticks and gamepads.
  *
  * \since This hint is available since SDL 3.2.0.

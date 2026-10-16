@@ -1241,7 +1241,8 @@ static bool HIDAPI_DriverPS3SonySixaxis_RumbleJoystickTriggers(SDL_HIDAPI_Device
 
 static Uint32 HIDAPI_DriverPS3SonySixaxis_GetJoystickCapabilities(SDL_HIDAPI_Device *device, SDL_Joystick *joystick)
 {
-    return 0;
+    // sixaxis.sys output commands: command 2 is rumble, command 1 is the four player LEDs.
+    return SDL_JOYSTICK_CAP_RUMBLE | SDL_JOYSTICK_CAP_PLAYER_LED;
 }
 
 static bool HIDAPI_DriverPS3SonySixaxis_SetJoystickLED(SDL_HIDAPI_Device *device, SDL_Joystick *joystick, Uint8 red, Uint8 green, Uint8 blue)
